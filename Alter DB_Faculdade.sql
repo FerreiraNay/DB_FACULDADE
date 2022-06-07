@@ -1,19 +1,19 @@
  ALTER TABLE curso
-  CHANGE nome_curso  nome_curso CHAR (20);
+ CHANGE nome_curso  nome_curso CHAR (20);
   
-  ALTER TABLE turma
-  CHANGE periodo periodo CHAR (8);
+ALTER TABLE turma
+CHANGE periodo periodo CHAR (8);
   
-  ALTER TABLE disciplina
-  CHANGE nome_disciplina nome_disciplina CHAR (20),
-  CHANGE num_alunoS num_alunoS INT (4) NOT NULL,
-  CHANGE fk_cod_departamento fk_cod_departamento INT (4) NOT NULL; 
+ALTER TABLE disciplina
+CHANGE nome_disciplina nome_disciplina CHAR (20),
+CHANGE num_alunoS num_alunoS INT (4) NOT NULL,
+CHANGE fk_cod_departamento fk_cod_departamento INT (4) NOT NULL; 
   
-   ALTER TABLE disciplina
-   MODIFY COLUMN num_alunos INT (4) NOT NULL; 
+ALTER TABLE disciplina
+MODIFY COLUMN num_alunos INT (4) NOT NULL; 
    
-  ALTER TABLE tipo_telefone
-  CHANGE cod_tipo_telefone cod_tipo INT(4) AUTO_INCREMENT;
+ALTER TABLE tipo_telefone
+CHANGE cod_tipo_telefone cod_tipo INT(4) AUTO_INCREMENT;
   
 ALTER TABLE telefone
 CHANGE fk_cod_tipo_telefone fk_cod_tipo INT (4);
