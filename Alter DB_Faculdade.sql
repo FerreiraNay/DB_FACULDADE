@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+ALTER TABLE curso
+CHANGE nome_curso  nome_curso CHAR (20);
+  
+ALTER TABLE turma
+ CHANGE periodo periodo CHAR (8);
+=======
  ALTER TABLE curso
  CHANGE nome_curso  nome_curso CHAR (20);
   
 ALTER TABLE turma
 CHANGE periodo periodo CHAR (8);
+>>>>>>> e96497274e5f073f3b92c6e456506269d0e7aa53
   
 ALTER TABLE disciplina
 CHANGE nome_disciplina nome_disciplina CHAR (20),

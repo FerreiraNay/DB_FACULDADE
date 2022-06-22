@@ -36,6 +36,34 @@ CREATE TABLE IF NOT EXISTS disciplina (
     PRIMARY KEY (cod_disciplina),
     FOREIGN KEY (fk_cod_departamento) REFERENCES departamento (cod_departamento)
     );
+<<<<<<< HEAD
+CREATE TABLE IF NOT EXISTS professor_disciplina (
+	fk_cod_professor INT (4),
+    fk_cod_disciplina INT (4),
+    PRIMARY KEY (fk_cod_professor, fk_cod_disciplina),
+    FOREIGN KEY (fk_cod_professor) REFERENCES professor (cod_professor),
+    FOREIGN KEY (fk_cod_disciplina) REFERENCES disciplina (cod_disciplina)
+    );
+	
+ CREATE TABLE IF NOT EXISTS curso_disciplina (
+	fk_cod_curso INT (4),
+    fk_cod_disciplina INT (4),
+    PRIMARY KEY (fk_cod_curso, fk_cod_disciplina),
+    FOREIGN KEY (fk_cod_curso) REFERENCES curso (cod_curso),
+    FOREIGN KEY (fk_cod_disciplina) REFERENCES disciplina (cod_disciplina)
+    );
+        
+CREATE TABLE IF NOT EXISTS turma (
+	cod_turma INT (4) NOT NULL AUTO_INCREMENT,
+        periodo CHAR (8) NOT NULL,
+        num_aluno INT (4),
+        dt_inicio DATE,
+        dt_fim DATE,
+        fk_cod_curso INT (4),
+        PRIMARY KEY (cod_turma),
+        FOREIGN KEY (fk_cod_curso) REFERENCES curso (cod_curso)
+        );
+=======
  CREATE TABLE IF NOT EXISTS professor_disciplina (
 	fk_cod_professor INT (4),
      fk_cod_disciplina INT (4),
@@ -62,6 +90,7 @@ CREATE TABLE IF NOT EXISTS turma (
      PRIMARY KEY (cod_turma),
      FOREIGN KEY (fk_cod_curso) REFERENCES curso (cod_curso)
      );
+>>>>>>> e96497274e5f073f3b92c6e456506269d0e7aa53
 	
     USE db_faculdade; 
     
